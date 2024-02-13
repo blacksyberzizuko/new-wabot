@@ -3355,7 +3355,7 @@ const pl= await xeonplaymp3.mp3(anup3k.url)
 await XeonBotInc.sendMessage(m.chat,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
-    mimetype: 'audio/mp4', ptt: true,
+    mimetype: 'audio/mp4', document: true,
     contextInfo:{
         externalAdReply:{
             title:anup3k.title,
@@ -3376,7 +3376,7 @@ if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) return replygcx
 const audio=await xeonaudp3.mp3(text)
 await XeonBotInc.sendMessage(m.chat,{
     audio: fs.readFileSync(audio.path),
-    mimetype: 'audio/mp4', ptt: true,
+    mimetype: 'audio/mp4', document: true,
     contextInfo:{
         externalAdReply:{
             title:audio.meta.title,
